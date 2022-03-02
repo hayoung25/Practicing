@@ -24,7 +24,9 @@ function createInput(e) {
         block.appendChild(paragraph);
         input.classList.add("new-input");
         paragraph.classList.add("new-paragraph");
-    } 
+    } else if (block.classList[0] === "new-paragraph") {
+        block.remove();
+    }
 
     // Add value in a box
     input.addEventListener('keypress', (e) => {
